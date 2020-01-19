@@ -1,0 +1,25 @@
+#task-table{
+	width: 90% !important;
+    margin: 0 auto !important;
+    margin-top: 200px !important;
+}
+
+.addTaskDiv{
+	margin: 0 auto;
+	
+}
+
+.title{
+	text-align: center;
+	padding-top: 20px;
+	
+}
+
+.subtitle{
+	text-align: center;
+	
+}
+
+.container{
+	margin-top: 100px;
+}
