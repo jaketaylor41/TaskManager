@@ -1,9 +1,14 @@
 <?php 
 
+$url = getenv('mysql://jywzdhdgnw64mykz:mapj2a8swag0lpkv@gx97kbnhgjzh3efb.cbetxkdyhwsb.us-east-1.rds.amazonaws.com:3306/zgsgeqqwdvbys6j6
+
+');
+$dbparts = parse_url($url);
+
 $servername = "gx97kbnhgjzh3efb.cbetxkdyhwsb.us-east-1.rds.amazonaws.com";
 $username = "jywzdhdgnw64mykz";
 $password = "mapj2a8swag0lpkv";
-$dbname = "zgsgeqqwdvbys6j6";
+$dbname = ltrim($dbparts['zgsgeqqwdvbys6j6'],'/');
 
 $errors = "";
 
