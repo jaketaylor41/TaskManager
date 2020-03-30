@@ -1,5 +1,8 @@
 {
+<<<<<<< HEAD
     "require": {
         "monolog/monolog": "^2.0"
     }
+=======
+>>>>>>> 89db74cc0cab46df974f8e839303db1877840705
 }
