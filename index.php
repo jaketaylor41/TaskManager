@@ -8,8 +8,10 @@ use Monolog\Logger;
 use Monolog\Handler\StreamHandler;
 
 $logger = new Logger('TaskManagerLogger');
+$log = new Logger('HerokuLogger');
 
 $logger->pushHandler(new StreamHandler(__DIR__.'/app.log', Logger::DEBUG));
+$log->pushHandler(new StreamHandler('php://stderr', Logger::DEBUG));
 
 
 ?>
@@ -44,6 +46,7 @@ $logger->pushHandler(new StreamHandler(__DIR__.'/app.log', Logger::DEBUG));
 			try {
 			    
 			    $logger->info("Entering Form to Add Task" );
+			    $log->info("Entering Form to Add Task" );
 			    ?>
 			    
   	<div style="text-align:center">
@@ -61,10 +64,12 @@ $logger->pushHandler(new StreamHandler(__DIR__.'/app.log', Logger::DEBUG));
 			if(isset($_POST['submit'])) {
 			    
 			    $logger->info("Exit form with task successfully added to DB");
+			    $log->info("Exit form with task successfully added to DB");
 
 			} else if($error){
 			    
 			    $logger->info("Exit form with task failed to add to DB");
+			    $log->info("Exit form with task failed to add to DB");
 			    
 			}
 			
@@ -72,6 +77,7 @@ $logger->pushHandler(new StreamHandler(__DIR__.'/app.log', Logger::DEBUG));
 			} catch (Exception $e) {
 			    
 			    $logger->error("Exception: ", array("message" => $e->getMessage()));
+			    $log->error("Exception: ", array("message" => $e->getMessage()));
 			    
 			}
 
