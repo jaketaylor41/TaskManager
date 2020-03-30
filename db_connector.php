@@ -1,10 +1,10 @@
 <?php 
 
 
-$servername = "localhost";
-$username = "root";
-$password = "root";
-$dbname = "TaskManager";
+$servername = "gx97kbnhgjzh3efb.cbetxkdyhwsb.us-east-1.rds.amazonaws.com";
+$username = "jywzdhdgnw64mykz";
+$password = "mapj2a8swag0lpkv";
+$dbname = "zgsgeqqwdvbys6j6";
 
 $errors = "";
 
